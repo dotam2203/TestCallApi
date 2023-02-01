@@ -7,9 +7,9 @@ import com.test.databinding.ItemBinding
 
 class ListAdapter : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
     //val list = mutableListOf<ListModel>()
-    var items = ArrayList<Genres>()
-    fun setUpdateData(items : ArrayList<Genres>){
-        this.items = items
+    var genres = arrayListOf<Genres>()
+    fun setUpdateData(genres : ArrayList<Genres>){
+        this.genres = genres
         notifyDataSetChanged()
     }
     inner class ViewHolder(val binding: ItemBinding): RecyclerView.ViewHolder(binding.root){}
@@ -21,8 +21,8 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder){
-            binding.tvTitle.text = items[position].name
+            binding.item = genres[position]
         }
     }
-    override fun getItemCount(): Int = items.size
+    override fun getItemCount(): Int = genres.size
 }

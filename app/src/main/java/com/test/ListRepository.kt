@@ -12,8 +12,13 @@ import retrofit2.Response
  * Date:  15/12/2022
  */
 class ListRepository {
-    fun getList(api_key: String): Flow<Response<ListModel>> = flow{
-        val request = CallApiRetrofit.loadApi.getListVideos(api_key)
+    fun getShowItem(api_key: String): Flow<Response<ListModel>> = flow{
+        val request = CallApiRetrofit.loadApi.getItem(api_key)
+        if(request.isSuccessful)
+            emit(request)
+    }.flowOn(IO)
+    fun getShowList(api_key: String) : Flow<Response<List<Genres>>> = flow {
+        val request =  CallApiRetrofit.loadApi.getListVideos(api_key)
         if(request.isSuccessful)
             emit(request)
     }.flowOn(IO)

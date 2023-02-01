@@ -5,7 +5,7 @@
     <data>
         <variable
             name="item"
-            type="com.test.ListModel" />
+            type="com.test.Genres" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,7 +24,8 @@
             app:layout_constraintTop_toTopOf="parent"
             android:textColor="@color/white"
             android:textStyle="bold|italic"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:text="@{item.name}"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
     <!--android:text="@{item.backdrop_path}"-->
 </layout>
