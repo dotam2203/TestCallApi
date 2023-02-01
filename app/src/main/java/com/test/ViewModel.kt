@@ -17,15 +17,7 @@ class ViewModel: ViewModel() {
         viewModelScope.launch {
             listRepository.getShowItem("e13cc716899ae5b7470d71870624e435").collect{
                 if(it.isSuccessful)
-                    _item.value = it.body()
-            }
-        }
-    }
-    fun getListToApi(){
-        viewModelScope.launch {
-            listRepository.getShowList("e13cc716899ae5b7470d71870624e435").collect{
-                if(it.isSuccessful)
-                    _list.value = it.body()?: emptyList()
+                    _list.value = it.body()?.genres!!
             }
         }
     }

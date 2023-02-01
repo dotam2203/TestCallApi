@@ -17,9 +17,4 @@ class ListRepository {
         if(request.isSuccessful)
             emit(request)
     }.flowOn(IO)
-    fun getShowList(api_key: String) : Flow<Response<List<Genres>>> = flow {
-        val request =  CallApiRetrofit.loadApi.getListVideos(api_key)
-        if(request.isSuccessful)
-            emit(request)
-    }.flowOn(IO)
 }

@@ -25,7 +25,7 @@ data class ListModel(
     var productionCountry: ArrayList<ProductionCountries> ?= null,
     var spokenLanguage: ArrayList<SpokenLanguages> ?= null
 )
-    data class Genres(
+data class Genres(
         var id: Int = 0,
         var name: String = ""
     )

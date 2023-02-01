@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initViewModel() {
-        viewModel.getListToApi()
+        viewModel.getItemToApi()
         lifecycleScope.launchWhenStarted {
             viewModel.list.collect {
                 if(it.isNotEmpty()){
