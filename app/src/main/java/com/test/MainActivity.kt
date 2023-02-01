@@ -67,8 +67,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }*/
+    //khởi tạo databinding
     private lateinit var binding: ActivityMainBinding
+    //khởi tạo adapter
     private val recyclerAdapter = ListAdapter()
+    //khởi tạo GenresModel
     private val genres = ArrayList<Genres>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -81,19 +84,25 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initViewModel() {
+        //gọi api
         viewModel.getItemToApi()
+        //couroutines scope
         lifecycleScope.launchWhenStarted {
+            //lấy biến đã khởi tạo bên viewmodel
             viewModel.list.collect {
+                //kiểu tra danh sách rỗng hay không
                 if(it.isNotEmpty()){
+                    //thêm danh sách vừa lây được vào list khai báo ở adapter
                     recyclerAdapter.genres.addAll(it)
                     genres.addAll(it)
+                    //reload lại danh sách
                     recyclerAdapter.notifyDataSetChanged()
                 }
                 else return@collect
             }
         }
     }
-
+    //khởi tạo recyclerview adapter hiển thị lên UI
     private fun initAdapter() {
         binding.apply {
             rvVideo.apply {

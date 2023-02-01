@@ -10,8 +10,6 @@ import retrofit2.http.Query
  */
 interface ListService {
     @GET("550")
+    //hàm sẽ tạm ngưng tới khi có kết quả trả về khi được gọi
     suspend fun getItem(@Query("api_key") api_key: String): Response<ListModel>
-    @GET("550")
-    suspend fun getListVideos(@Query("api_key") api_key: String): Response<List<Genres>>
-
 }

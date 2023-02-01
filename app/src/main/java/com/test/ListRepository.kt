@@ -13,8 +13,10 @@ import retrofit2.Response
  */
 class ListRepository {
     fun getShowItem(api_key: String): Flow<Response<ListModel>> = flow{
+        //thực hiện gọi API bằng retrofit
         val request = CallApiRetrofit.loadApi.getItem(api_key)
         if(request.isSuccessful)
+            //phát kết quả yêu cầu cho luồng flow
             emit(request)
-    }.flowOn(IO)
+    }.flowOn(IO)// chạy trong IO được ưu tiên
 }
