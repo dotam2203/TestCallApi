@@ -11,9 +11,10 @@ import com.test.databinding.ListFragmentBinding
 
 class ListFragment : InitViewModel() {
     private lateinit var binding: ListFragmentBinding
-
     //khởi tạo adapter
-    private val recyclerAdapter = ListAdapter()
+    private val recyclerAdapter by lazy {
+        ListAdapter()
+    }
 
     //khởi tạo GenresModel
     private val genres = ArrayList<Genres>()
@@ -45,7 +46,8 @@ class ListFragment : InitViewModel() {
                     recyclerAdapter.apply {
                         genres.addAll(it)
                         //reload lại danh sách
-                        notifyDataSetChanged()
+                        //notifyDataSetChanged()
+                        recyclerAdapter.diffGenres.submitList(it)
                     }
                 } else return@collect
             }
