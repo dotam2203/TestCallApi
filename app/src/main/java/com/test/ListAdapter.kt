@@ -8,7 +8,7 @@ import com.test.databinding.ItemBinding
 class ListAdapter : RecyclerView.Adapter<ListAdapter.ViewHolder>() {
     //val list = mutableListOf<ListModel>()
     //khởi tạo GenresModel
-    var genres = arrayListOf<Genres>()
+    var genres = mutableListOf<Genres>()
     fun setUpdateData(genres : ArrayList<Genres>){
         this.genres = genres
         notifyDataSetChanged()

@@ -79,8 +79,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         initAdapter()
         initViewModel()
-
-
     }
 
     private fun initViewModel() {
@@ -92,11 +90,13 @@ class MainActivity : AppCompatActivity() {
             viewModel.list.collect {
                 //kiểu tra danh sách rỗng hay không
                 if(it.isNotEmpty()){
-                    //thêm danh sách vừa lây được vào list khai báo ở adapter
-                    recyclerAdapter.genres.addAll(it)
+                    //thêm danh sách vừa lấy được vào list khai báo ở adapter
                     genres.addAll(it)
-                    //reload lại danh sách
-                    recyclerAdapter.notifyDataSetChanged()
+                    recyclerAdapter.apply {
+                        genres.addAll(it)
+                        //reload lại danh sách
+                        notifyDataSetChanged()
+                    }
                 }
                 else return@collect
             }

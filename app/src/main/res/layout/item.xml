@@ -27,5 +27,4 @@
             android:textSize="20sp"
             android:text="@{item.name}"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <!--android:text="@{item.backdrop_path}"-->
 </layout>
