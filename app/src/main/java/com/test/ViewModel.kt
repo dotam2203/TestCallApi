@@ -9,12 +9,10 @@ import kotlinx.coroutines.launch
 class ViewModel: ViewModel() {
     //khởi tạo
     private val listRepository = ListRepository()
-    //khởi tạo dnah sách rỗng với MutableStateFlow
+    //khởi tạo danh sách rỗng với MutableStateFlow
     private val _list = MutableStateFlow(emptyList<Genres>())
     //khởi tạo gán giá trị cho _list khi list lấy được giá trị khi dùng coroutines ở MainActivity
     val list: StateFlow<List<Genres>> = _list
-    private val _item: MutableStateFlow<ListModel?> = MutableStateFlow(null)
-    val item: StateFlow<ListModel?> = _item
 
     fun getItemToApi(){
         viewModelScope.launch {
