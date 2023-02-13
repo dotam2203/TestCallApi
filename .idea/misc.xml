@@ -6,7 +6,9 @@
         <entry key="..\:/Android Studio Kotlin/TestCallApi/app/src/main/res/drawable-v24/custom_screen.xml" value="0.1815" />
         <entry key="..\:/Android Studio Kotlin/TestCallApi/app/src/main/res/drawable/custom_screen.xml" value="0.1915" />
         <entry key="..\:/Android Studio Kotlin/TestCallApi/app/src/main/res/drawable/ic_back.xml" value="0.1915" />
+        <entry key="..\:/Android Studio Kotlin/TestCallApi/app/src/main/res/drawable/ic_calendar.xml" value="0.1845" />
         <entry key="..\:/Android Studio Kotlin/TestCallApi/app/src/main/res/layout/activity_main.xml" value="0.23229166666666667" />
+        <entry key="..\:/Android Studio Kotlin/TestCallApi/app/src/main/res/layout/fragment_date_picker_custome.xml" value="0.23229166666666667" />
         <entry key="..\:/Android Studio Kotlin/TestCallApi/app/src/main/res/layout/fragment_list.xml" value="0.23229166666666667" />
         <entry key="..\:/Android Studio Kotlin/TestCallApi/app/src/main/res/layout/item.xml" value="0.23229166666666667" />
         <entry key="..\:/Android Studio Kotlin/TestCallApi/app/src/main/res/layout/list_fragment.xml" value="0.23177083333333334" />

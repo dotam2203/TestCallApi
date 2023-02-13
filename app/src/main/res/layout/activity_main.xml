@@ -12,11 +12,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/fragment">
+        app:layout_constraintBottom_toTopOf="@id/fragment"
+        android:layout_margin="5dp">
         <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/imbBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_back"
+            android:background="@color/trans"/>
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/imbCalendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_calendar"
+            android:layout_gravity="end|center_vertical"
             android:background="@color/trans"/>
     </androidx.appcompat.widget.Toolbar>
     <FrameLayout

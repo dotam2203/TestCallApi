@@ -1,9 +1,13 @@
 package com.test
 
+import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import com.test.databinding.ActivityMainBinding
+import com.test.fragment.DatePickerCustomFragment
 import com.test.fragment.ListFragment
+import java.util.ResourceBundle.Control.getControl
 
 class MainActivity : AppCompatActivity(){
     /*//khởi tạo ViewModel
@@ -64,11 +68,20 @@ class MainActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        getFragment()
+        getFragment(ListFragment(),R.id.fragment)
+        getOnclickCalendar()
     }
-    private fun getFragment(){
-        val fragment = ListFragment()
-        supportFragmentManager.beginTransaction().replace(R.id.fragment, fragment).commit()
+
+    private fun getOnclickCalendar() {
+        binding.imbCalendar.setOnClickListener {
+            getFragment(DatePickerCustomFragment(),R.id.fragment)
+        }
+        binding.imbBack.setOnClickListener {
+            getFragment(ListFragment(),R.id.fragment)
+        }
+    }
+    private fun getFragment(fragment: Fragment, id: Int){
+        supportFragmentManager.beginTransaction().replace(id, fragment).commit()
     }
 
 
