@@ -1,5 +1,6 @@
-package com.test
+package com.test.service
 
+import com.test.ListModel
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

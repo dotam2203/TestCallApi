@@ -1,19 +1,9 @@
 package com.test
 
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.MediaController
-import android.widget.VideoView
-import androidx.databinding.DataBindingUtil.setContentView
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.test.databinding.ActivityMainBinding
-import com.test.databinding.TestBinding
-import kotlinx.coroutines.NonCancellable.start
-import kotlinx.coroutines.delay
+import com.test.fragment.ListFragment
 
 class MainActivity : AppCompatActivity(){
     /*//khởi tạo ViewModel

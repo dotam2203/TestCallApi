@@ -1,10 +1,11 @@
-package com.test
+package com.test.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.test.Genres
 import com.test.databinding.ItemBinding
 
 class ListAdapter : RecyclerView.Adapter<ListAdapter.ViewHolder>() {

@@ -1,13 +1,15 @@
-package com.test
+package com.test.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.test.Genres
+import com.test.adapter.ListAdapter
 import com.test.databinding.ListFragmentBinding
+import com.test.model.InitViewModel
 
 class ListFragment : InitViewModel() {
     private lateinit var binding: ListFragmentBinding

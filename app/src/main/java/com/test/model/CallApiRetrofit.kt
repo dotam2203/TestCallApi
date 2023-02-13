@@ -1,4 +1,5 @@
-package com.test
+package com.test.model
+import com.test.service.ListService
 import okhttp3.OkHttpClient
 import okhttp3.Protocol
 import okhttp3.logging.HttpLoggingInterceptor
