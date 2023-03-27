@@ -1,13 +1,12 @@
 package com.test
 
-import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.test.databinding.ActivityMainBinding
+import com.test.fragment.ChooseDateBirthFragment
 import com.test.fragment.DatePickerCustomFragment
 import com.test.fragment.ListFragment
-import java.util.ResourceBundle.Control.getControl
 
 class MainActivity : AppCompatActivity(){
     /*//khởi tạo ViewModel
@@ -74,8 +73,11 @@ class MainActivity : AppCompatActivity(){
 
     private fun getOnclickCalendar() {
         binding.imbCalendar.setOnClickListener {
-            getFragment(DatePickerCustomFragment(),R.id.fragment)
+            getFragment(ChooseDateBirthFragment(),R.id.fragment)
         }
+        /*binding.imbCalendar.setOnClickListener {
+            getFragment(DatePickerCustomFragment(),R.id.fragment)
+        }*/
         binding.imbBack.setOnClickListener {
             getFragment(ListFragment(),R.id.fragment)
         }

@@ -14,6 +14,12 @@ buildscript {
         kotlin_version = "1.6.20"
         nav_version = "2.4.1"
         room_version = '2.3.0'
+        github = 'https://github.com/florent37/SingleDateAndTimePicker'
+
+        libraryGroup = 'com.github.florent37'
+        libraryName = 'singledateandtimepicker'
+        libraryVersion = "2.2.8"
+        libraryDescription = 'SingleDateAndTimePicker'
     }
     repositories {
         google()
